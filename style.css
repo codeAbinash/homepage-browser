@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --color:rgb(97, 11, 255);
+}
+
+a{
+    text-decoration: none;
+    color: var(--color);
+}
+body{
+    height: auto;
+    min-height: 100vh;
+}
+.top{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+h1{
+    font-size: 3.5em;
+}
+.top p{
+    color: #888;
+    font-size: 0.7em;
+    opacity: 0.7;
+}
+.searchDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#query{
+    width: min(88%,500px);
+    margin-top: 50px;
+    font-size: 1em;
+    padding: 18px 10px 18px 15px;
+    outline :none;
+    border: 2px solid #666;
+    transition: 0.3s linear border-color;
+    font-weight: 500;
+}
+#query:focus{
+    border-color: var(--color);
+}
+.searchDiv .suggestions{
+    width: min(88%,500px);
+    height: auto;
+    margin-top: 10px;
+    background-color: #fafafa;
+}
+.searchDiv .suggestions p{
+    font-weight: 500;
+    padding: 15px;
+}
+.searchDiv .suggestions p:active{
+    background-color: #ddd;
+}
+.bookmarks{
+    width: min(88%,500px);
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.bookmarks a{
+    padding:5px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #00000008;
+    font-size: 0.85em;
+}
