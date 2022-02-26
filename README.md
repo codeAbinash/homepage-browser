@@ -3,7 +3,7 @@
 ![Release Date](https://img.shields.io/github/release-date/codeabinash/homepage-browser)
 ![Downloads](https://img.shields.io/github/downloads/codeabinash/homepage-browser/total?color=limeg&logo=github)
 ![Code Size](https://img.shields.io/github/languages/code-size/codeabinash/homepage-browser?color=blue)
-![Language](https://img.shields.io/github/languages/top/codeabinash/homepage-browser?color=yellow)
+![Language](https://img.shields.io/github/languages/top/codeabinash/homepage-browser?color=blueviolet)
 ![License](https://img.shields.io/github/license/codeabinash/homepage-browser?color=orange)
 
 
