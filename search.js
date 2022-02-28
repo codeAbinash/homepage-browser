@@ -49,9 +49,9 @@ function colorOnce(n=0,ud="u"){
     sugDiv.children[n].style.backgroundColor = "#ddd";
     if(ud=="u")
         sugDiv.children[n+1].style.backgroundColor = "#fff";
-    else
+    else if(n!=0){
         sugDiv.children[n-1].style.backgroundColor = "#fff";
-    
+    }
 }
 
 function clean(){
