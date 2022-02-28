@@ -1,20 +1,39 @@
 let searchInput = document.getElementById("query");
 let sugDiv = document.getElementById("suggestions");
 let arrowKeyCount = -1;
+let topDiv = document.querySelector(".top");
 
 
 searchInput.onkeyup = inputNow;
+searchInput.onfocus = focused;
+searchInput.onblur = blurred;
+searchInput.onsearch = search;
+
+
+
+
+function search(){
+    let txt = searchInput.value;
+    if(txt.length>0){
+        clean();
+        openLink("https://www.google.com/search?q="+txt);
+    }
+}
+function focused(){
+    topDiv.style.paddingTop = "100px";
+}
+function blurred(){
+    topDiv.style.paddingTop = "150px";
+}
+
+
 
 function inputNow(event){
     let searchText = searchInput.value;
     let totalSuggestions = sugDiv.children.length;
+    // event.preventDefault();
 
     switch (event.keyCode) {
-        case 13:
-            event.preventDefault();
-            clean();
-            openLink("https://www.google.com/search?q="+searchText);
-            break;
         case 38://Up
             if(arrowKeyCount>0){
                 arrowKeyCount--;

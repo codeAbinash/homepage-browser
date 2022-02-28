@@ -25,12 +25,11 @@ body{
     user-select: none;
 }
 .top{
-    width: 100vw;
-    height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 100px;
+    padding-top: 150px;
+    transition: 0.2s linear padding-top;
 }
 h1{
     font-size: 3.5em;
@@ -57,11 +56,10 @@ h1{
     border-radius: 5px;
 }
 #query::-webkit-search-cancel-button{
-    /* padding: 15px; */
     -webkit-appearance: none;
     height: 1.5em;
-    height: 15px;
-    width: 15px;
+    height: 13px;
+    width: 13px;
     border-radius:10px;
     background: url("./icons/cross.svg");
 }
@@ -74,6 +72,8 @@ h1{
     height: auto;
     margin-top: 10px;
     background-color: #fafafa;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .searchDiv .suggestions p{
     padding: 15px;
