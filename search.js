@@ -19,7 +19,7 @@ function inputNow(event){
             if(arrowKeyCount>0){
                 arrowKeyCount--;
                 searchInput.value = sugDiv.children[arrowKeyCount].innerHTML;
-                console.log(arrowKeyCount);
+                colorOnce(arrowKeyCount,"u");
             }
             break;
 
@@ -27,7 +27,7 @@ function inputNow(event){
             if(arrowKeyCount<totalSuggestions-1){
                 arrowKeyCount++;
                 searchInput.value =  sugDiv.children[arrowKeyCount].innerHTML;
-                console.log(arrowKeyCount);
+                colorOnce(arrowKeyCount,"d");
             }
             break;
 
@@ -44,6 +44,15 @@ function inputNow(event){
     }
 }
 
+
+function colorOnce(n=0,ud="u"){
+    sugDiv.children[n].style.backgroundColor = "#ddd";
+    if(ud=="u")
+        sugDiv.children[n+1].style.backgroundColor = "#fff";
+    else
+        sugDiv.children[n-1].style.backgroundColor = "#fff";
+    
+}
 
 function clean(){
     searchInput.value = "";
@@ -75,9 +84,6 @@ function searchData(data){
 
 }
 
-document.body.onclick = ()=>{
-    searchInput.focus();
-}
 
 function lucky(){
     window.open("https://google.com/search?btnI=I&q=" + searchInput.value,"_blank");
