@@ -13,7 +13,7 @@ function inputNow(event){
         case 13:
             event.preventDefault();
             clean();
-            window.open("https://www.google.com/search?q="+searchText,"_blank");
+            openLink("https://www.google.com/search?q="+searchText);
             break;
         case 38://Up
             if(arrowKeyCount>0){
@@ -68,7 +68,7 @@ function searchData(data){
         if(searchType[i] == 'NAVIGATION'){
             searchElem.onclick = ()=>{
                 clean();
-                window.open(searchData[i],"_blank");
+                openLink(searchData[i]);
             }
             searchElem.style.color = "dodgerBlue";
         }else{
@@ -86,5 +86,13 @@ function searchData(data){
 
 
 function lucky(){
-    window.open("https://google.com/search?btnI=I&q=" + searchInput.value,"_blank");
+    if(searchInput.value.length!=0)
+        openLink("https://google.com/search?btnI=I&q=" + searchInput.value);
+}
+
+
+function openLink(link="",delay=0){
+    setTimeout(() => {
+        window.open(link,"_blank");
+    }, delay);
 }
