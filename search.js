@@ -110,8 +110,8 @@ function lucky(){
 }
 
 
-function openLink(link="",delay=0){
+function openLink(link="",delay=0,tab="_self"){
     setTimeout(() => {
-        window.open(link,"_blank");
+        window.open(link,tab);
     }, delay);
 }
