@@ -40,7 +40,7 @@ h1{
     height: 13px;
     width: 13px;
     border-radius:10px;
-    background: url("./icons/cross.svg");
+    background: url("../icons/cross.svg");
 }
 
 #query:focus{
