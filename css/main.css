@@ -31,9 +31,9 @@ h1{
     font-size: 1em;
     padding: 18px 10px 18px 18px;
     outline : none;
-    border: 2px solid #666;
+    border: 2px solid #888;
     transition: 0.3s linear border-color;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 #query::-webkit-search-cancel-button{
     -webkit-appearance: none;
@@ -48,18 +48,18 @@ h1{
     border-color: var(--color);
 }
 .searchDiv .suggestions{
-    width: min(87%,500px);
+    width: min(88%,500px);
     height: auto;
-    background-color: #fafafa11;
-    backdrop-filter: blur(20px);
+    background-color: #00000000;
+    backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
     position: absolute;
-    margin-top: 140px;
+    margin-top: 136px;
     box-shadow: 0px 0px 10px 10px #00000008;
 }
 .searchDiv .suggestions p{
-    padding: 15px;
+    padding: 15px 15px 15px 20px;
 }
 .searchDiv .suggestions p:active{
     background-color: #ddd;
@@ -73,7 +73,7 @@ h1{
     justify-content: center;
 }
 .bookmarks p{
-    padding:10px 20px;
+    padding:11px 21px;
     margin: 5px;
     border-radius: 5px;
     background-color: #00000008;
