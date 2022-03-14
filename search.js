@@ -8,6 +8,7 @@ searchInput.onkeyup = inputNow;
 searchInput.onfocus = focused;
 searchInput.onblur = blurred;
 searchInput.onsearch = search;
+searchInput.onclick = hideSearch;
 
 
 
@@ -16,6 +17,7 @@ function search(){
     let txt = searchInput.value;
     if(txt.length>0){
         clean();
+        hideSearch();
         openLink("https://www.google.com/search?q="+txt);
     }
 }
@@ -75,6 +77,9 @@ function colorOnce(n=0,ud="u"){
 
 function clean(){
     searchInput.value = "";
+}
+
+function hideSearch(){
     sugDiv.style.display= "none";
 }
 function searchData(data){
@@ -87,6 +92,7 @@ function searchData(data){
         if(searchType[i] == 'NAVIGATION'){
             searchElem.onclick = ()=>{
                 clean();
+                hideSearch();
                 openLink(searchData[i]);
             }
             searchElem.style.color = "dodgerBlue";

@@ -1,0 +1,50 @@
+body{
+    min-height: 100vh;
+    width: auto;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+}
+.inputs{
+    width: 100%;
+    width: min(100%,500px);
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main .heading{
+    margin-bottom: 50px;
+}
+input{
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1em;
+    padding: 18px 10px 18px 18px;
+    outline : none;
+    border: 2px solid #666;
+    transition: 0.3s linear border-color;
+    border-radius: 5px;
+}
+input:focus{
+    border-color: var(--color);
+}
+button.save{
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1em;
+    padding: 18px 10px 18px 18px;
+    outline : none;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color);
+    color: #fff;
+    text-transform: uppercase;
+}
+.edit{
+    margin-top: 100px;
+
+}

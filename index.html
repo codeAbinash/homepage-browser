@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Search</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+
     <script src="search.js" defer></script>
 </head>
 <body>
@@ -19,13 +21,14 @@
     </div>
     <div class="bookmarks">
         <p onclick="openLink('https://mail.google.com/mail/mu/mp/424/#tl/Inbox',100)">Gmail</p>
-        <p onclick="openLink('https://drive.google.com',100)">Drive</p>
         <p onclick="openLink('https://github.com',100)">Github</p>
         <p onclick="openLink('https://yt1s.com',100)">yt1s</p>
         <p onclick="openLink('https://fdown.net',100)">fDown</p>
-        <p onclick="openLink('https://fonts.google.com',100)">Fonts</p>
-        <p onclick="openLink('https://accounts.google.com',100)">Google Acc</p>
         <p onclick="openLink('https://github.com/codeAbinash',100)">Abinash</p>
+        <div id="newBookmarks">
+            <p onclick="openLink('https://github.com/codeAbinash',100)">Abinash</p>
+        </div>
+        <p onclick="openLink('./new.html')">New Shortcut</p>
     </div>
 </body>
 </html>
