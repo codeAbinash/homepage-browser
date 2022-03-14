@@ -68,11 +68,11 @@ function inputNow(event){
 
 
 function colorOnce(n=0,ud="u"){
-    sugDiv.children[n].style.backgroundColor = "#ddd";
+    sugDiv.children[n].style.backgroundColor = "#00000010";
     if(ud=="u")
-        sugDiv.children[n+1].style.backgroundColor = "#fff";
+        sugDiv.children[n+1].style.backgroundColor = "#fafafa11";
     else if(n!=0){
-        sugDiv.children[n-1].style.backgroundColor = "#fff";
+        sugDiv.children[n-1].style.backgroundColor = "#fafafa11";
     }
 }
 
