@@ -1,3 +1,5 @@
+const SHORTCUTS = "homepage-browser-shortcut";
+
 let searchInput = document.getElementById("query");
 let sugDiv = document.getElementById("suggestions");
 let arrowKeyCount = -1;
@@ -126,3 +128,23 @@ function openLink(link="",delay=0,tab="_self"){
         window.open(link,tab);
     }, delay);
 }
+
+
+//Load Shortcuts
+function loadShortcuts(){
+    const DOM_SHORTCUT_DIV = document.getElementById("newShortcuts");
+    let allShortcuts = localStorage.getItem(SHORTCUTS)
+    if(!allShortcuts) return
+
+    allShortcuts = JSON.parse(allShortcuts)
+
+    for(let shortcut of allShortcuts){
+        const DOM_SHORTCUT = document.createElement("p")
+        DOM_SHORTCUT.innerText = shortcut.name
+        DOM_SHORTCUT.setAttribute("onclick", `openLink('${shortcut.url}')`)
+        DOM_SHORTCUT_DIV.append(DOM_SHORTCUT)
+    }
+
+}
+
+loadShortcuts();

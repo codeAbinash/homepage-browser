@@ -64,7 +64,7 @@ h1{
 .searchDiv .suggestions p:active{
     background-color: #ddd;
 }
-.bookmarks{
+.shortcuts{
     width: min(88%,500px);
     margin: auto;
     margin-top: 70px;
@@ -72,7 +72,7 @@ h1{
     flex-wrap: wrap;
     justify-content: center;
 }
-.bookmarks p{
+.shortcuts p{
     padding:11px 21px;
     margin: 5px;
     border-radius: 5px;
@@ -82,6 +82,6 @@ h1{
     pointer-events: fill;
     color: var(--color);
 }
-.bookmarks p:active{
+.shortcuts p:active{
     transform: scale(0.9);
 }
