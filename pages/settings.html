@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/settings.css">
+    <script src="../js/setings.js" defer></script>
+</head>
+<body>
+    <h1 class="heading">Settings</h1>
+    
+    <p class="settHeading">Change Wallpaper</p>
+    <div class="wallpapers">
+        <img src="../wallpapers/0.svg" class="touch" onclick="setWallpaper(0,0)">
+        <img src="../wallpapers/1.svg" class="touch" onclick="setWallpaper(1,1)">
+        <img src="../wallpapers/2.svg" class="touch" onclick="setWallpaper(2,1)">
+        <img src="../wallpapers/3.svg" class="touch" onclick="setWallpaper(3,0)">
+        <img src="../wallpapers/4.svg" class="touch" onclick="setWallpaper(4,1)">
+        <img src="../wallpapers/5.svg" class="touch" onclick="setWallpaper(5,0)">
+    </div>
+    <div class="last">
+        <div class="link touch" onclick="removeWallpaper()">Remove Wallpaper?</div>
+    </div>
+</body>
+</html>

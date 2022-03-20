@@ -1,0 +1,45 @@
+.heading{
+    font-size: 1.6em;
+    padding: 15px;
+}
+.settHeading{
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.wallpapers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.wallpapers img{
+    width: 40%;
+    height: 50vmin;
+    object-fit: cover;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0px #00000010;
+    outline: none;
+    border: 3px solid var(--color);
+    border-color: transparent;
+    transition: 0.1s linear border-color,0.1s linear transform;
+}
+.last{
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.last .link{
+    background-color: #00000010;
+    color: var(--color);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+}

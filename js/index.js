@@ -1,4 +1,11 @@
+const WALLPAPER = localStorage.getItem("homepage-browser-wallpaper-number") 
+const WALLPAPER_TYPE =  localStorage.getItem("homepage-browser-wallpaper-type")
+
 const SHORTCUTS = "homepage-browser-shortcut";
+const DOM_SHORTCUT_DIV = document.getElementById("newShortcuts")
+const DOM_WALLPAPER = document.getElementById("wallpaper")
+
+
 
 let searchInput = document.getElementById("query");
 let sugDiv = document.getElementById("suggestions");
@@ -132,10 +139,10 @@ function openLink(link="",delay=0,tab="_self"){
 
 //Load Shortcuts
 function loadShortcuts(){
-    const DOM_SHORTCUT_DIV = document.getElementById("newShortcuts");
     let allShortcuts = localStorage.getItem(SHORTCUTS)
-    if(!allShortcuts) return
-
+    if(!allShortcuts){
+        return;
+    }
     allShortcuts = JSON.parse(allShortcuts)
 
     for(let shortcut of allShortcuts){
@@ -144,7 +151,28 @@ function loadShortcuts(){
         DOM_SHORTCUT.setAttribute("onclick", `openLink('${shortcut.url}')`)
         DOM_SHORTCUT_DIV.append(DOM_SHORTCUT)
     }
-
+    
 }
 
 loadShortcuts();
+DOM_SHORTCUT_DIV.innerHTML += `<p onclick="openLink('./pages/new.html')">+</p>`;
+
+
+
+//Apply Wallpaper if available
+function loadWallpaper(){
+    if(!WALLPAPER){
+        DOM_WALLPAPER.remove()
+        return
+    }
+    const wallNumber = Number(WALLPAPER)
+    console.log(wallNumber);
+    DOM_WALLPAPER.src = `../wallpapers/${wallNumber}.svg`
+    
+    
+    if(WALLPAPER_TYPE==0)
+        document.body.style.setProperty("--text", "#fff")
+    else
+        document.body.style.setProperty("--text", "#000")
+}
+loadWallpaper()

@@ -18,7 +18,7 @@ class Shortcut{
         }
         allShortcuts.push(this.s);
         localStorage.setItem(SHORTCUTS, JSON.stringify(allShortcuts))
-        window.history.back()
+        window.location.replace("/","_SELF")
     }
 
     #error(){
