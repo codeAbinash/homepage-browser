@@ -28,3 +28,4 @@ Check yourself : [Open Page](https://codeabinash.github.io/homepage-browser/)
 ### Autofill by Google
 
 <img src="./doc/2.jpg" alt="Sample Image">
+<img src="./doc/3.jpg" alt="Sample Image">
