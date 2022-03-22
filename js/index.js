@@ -166,7 +166,6 @@ function loadWallpaper(){
         return
     }
     const wallNumber = Number(WALLPAPER)
-    console.log(wallNumber);
     DOM_WALLPAPER.src = `./wallpapers/${wallNumber}.svg`
     
     
