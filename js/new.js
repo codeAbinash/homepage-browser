@@ -18,7 +18,8 @@ class Shortcut{
         }
         allShortcuts.push(this.s);
         localStorage.setItem(SHORTCUTS, JSON.stringify(allShortcuts))
-        window.location.replace("../","_SELF")
+        //Have to be fixed
+        window.location.replace("/","_SELF")
     }
 
     #error(){
