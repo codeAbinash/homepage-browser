@@ -17,7 +17,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 150px;
+    padding-top: 80px;
     transition: 0.2s linear padding-top;
 }
 h1{
@@ -42,7 +42,7 @@ h1{
     border: 1.5px solid var(--text);
     color: var(--text);
     transition: 0.3s linear border-color;
-    border-radius: 3px;
+    border-radius: 7px;
     background-color: transparent;
     backdrop-filter: blur(5px);
 }
